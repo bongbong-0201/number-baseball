@@ -1,4 +1,11 @@
 import random
+import sys
+import io
+
+# Windows 터미널 UTF-8 출력 설정
+if sys.platform == "win32":
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+    sys.stdin = io.TextIOWrapper(sys.stdin.buffer, encoding="utf-8", errors="replace")
 
 
 def generate_secret():
